@@ -28,6 +28,7 @@ const imageElement = document.querySelector('#home');
 
 nameElement.innerHTML = `<strong>${fullName}</strong>`;
 imageElement.setAttribute('src', profileImage);
+imageElement.setAttribute('alt', `Profile Image of${fullName}`);
 
 
 
