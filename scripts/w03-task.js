@@ -12,10 +12,9 @@ function add(number1, number2) {
 function addNumbers() {
     let addNumber1 = Number(document.querySelector("#add1").value);
     let addNumber2 = Number(document.querySelector("#add2").value);
-    let sum = add(addNumber1, addNumber2);
-    document.querySelector("#sum").textContent = sum;
-    document.getElementById("addNumbers").addEventListener("click", addNumbers);
+    return add(addNumber1, addNumber2);
 }
+document.querySelector("#addNumbers").addEventListener("click", () => document.querySelector("#sum").value = addNumbers())
 
 /* Function Expression - Subtract Numbers */
 const subtract = function (number1, number2) {
@@ -24,10 +23,10 @@ const subtract = function (number1, number2) {
 
 function subtractNumbers() {
   let subtractNumber1 = Number(document.querySelector("#subtract1").value);
-  let subtractNumber2 = Number(document.querySelector("#subtract2").value);
-  let difference = subtract(subtractNumber1, subtractNumber2);
-  document.querySelector("#difference").textContent = difference;
+    let subtractNumber2 = Number(document.querySelector("#subtract2").value);
+    return subtractNumber1 - subtractNumber2;
 }
+document.querySelector("#subtractNumbers").addEventListener("click",() => document.querySelector("#difference").value = subtractNumbers())
 
 /* Arrow Function - Multiply Numbers */
 
@@ -35,10 +34,11 @@ const multiply = (number1, number2) => number1 * number2;
 
 function multiplyNumbers() {
   let factor1 = Number(document.querySelector("#factor1").value);
-  let factor2 = Number(document.querySelector("#factor2").value);
-  let product = multiply(factor1, factor2);
-  document.querySelector("#product").textContent = product;
+    let factor2 = Number(document.querySelector("#factor2").value);
+    return factor1 * factor2;
+
 }
+document.querySelector("#multiplyNumbers").addEventListener("click", () => document.querySelector("#product").value = multiplyNumbers());
 
 
 
@@ -50,21 +50,18 @@ const divide = function (number1, number2) {
 function divideNumbers() {
   let dividend = Number(document.querySelector("#dividend").value);
   let divisor = Number(document.querySelector("#divisor").value);
-  let quotient = divide(dividend, divisor);
-  document.querySelector("#quotient").textContent = quotient;
+    return dividend / divisor;
 }
+document.querySelector("#divideNumbers").addEventListener("click", () => document.querySelector("#quotient").value = divideNumbers())
+  /* Decision Structure */
+  function calculateTotalDue() {
+    let subtotal = Number(document.querySelector("#subtotal").value);
+    let isMember = document.querySelector("#member").checked;
 
+    let totalDue = isMember ? subtotal * 0.9 : subtotal;
 
-
-/* Decision Structure */
-function calculateTotalDue() {
-  let subtotal = Number(document.querySelector("#subtotal").value);
-  let isMember = document.querySelector("#member").checked;
-
-  let totalDue = isMember ? subtotal * 0.9 : subtotal;
-
-  document.querySelector("#total").textContent = `$${totalDue.toFixed(2)}`;
-}
+    document.querySelector("#total").textContent = `$${totalDue.toFixed(2)}`;
+  };
 
 
 /* ARRAY METHODS - Functional Programming */
