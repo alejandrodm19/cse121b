@@ -60,8 +60,12 @@ document.querySelector("#divideNumbers").addEventListener("click", () => documen
 
     let totalDue = isMember ? subtotal * 0.9 : subtotal;
 
-    document.querySelector("#total").textContent = `$${totalDue.toFixed(2)}`;
-  };
+    return totalDue;
+};
+document.querySelector("#getTotal").addEventListener("click", () => {
+    let totalDue = calculateTotalDue();
+    document.querySelector("#total").textContent = `$${totalDue.toFixed(2)}`
+})
 
 
 /* ARRAY METHODS - Functional Programming */
