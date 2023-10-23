@@ -1,0 +1,103 @@
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    background: rgb(0, 15, 22);
+    background: linear-gradient(#0f0c29, #302b63, #24243e);
+}
+
+h1{
+    margin-bottom: 2rem;
+}
+
+h2{
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+.cripto-page-container {
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  gap: 2rem;
+  position: relative;
+}
+
+.cripto-page-container .info {
+  position: fixed;
+}
+
+.cripto-page-container .history {
+  grid-column-start: 2;
+}
+
+.cripto-page-container .main-info {
+  margin-bottom: 2rem;
+}
+
+.cripto-page-container .symbol {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.cripto-page-container .details {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1.5rem;
+  padding-left: 2.5rem;
+}
+
+.cripto-page-container .detail {
+  margin-bottom: 1rem;
+}
+
+.cripto-page-container h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: .2rem;
+}
+
+table {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+td, th {
+  padding: 1rem;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead tr {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.34);
+}
+
+tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+}
+
